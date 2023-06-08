@@ -1,0 +1,904 @@
+
+{% load static %}
+{% load display %}
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head><!doctype html>
+<html class="no-js" lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="3" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dashboard V.3 | Nalika - Material Admin Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> -->
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<!-- nalika Icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'css/nalika-icon.css'   %}">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static  'css/owl.theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.transitions.css'   %}">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static  'css/meanmenu.min.css' %}">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'css/morrisjs/morris.css'  %}">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'css/scrollbar/jquery.mCustomScrollbar.min.css' %}">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'css/metisMenu/metisMenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/metisMenu/metisMenu-vertical.css'  %}">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'css/calendar/fullcalendar.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/calendar/fullcalendar.print.min.css' %}">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="{% static  'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+</head>
+
+<body style="background-color:black;">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+   
+    <!-- Start Welcome area -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        
+        <div class="header-advance-area" >
+           
+            
+            <div class="breadcome-area" >
+                <div class="container-fluid">
+                    <div class="row" >
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list" ">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="breadcomb-wp" >
+											<div class="breadcomb-icon">
+												
+											</div>
+											<div class="breadcomb-ctn" >
+												<h2 style="color:aliceblue;">Desktop Usage Dashboard</h2>
+												
+											</div>
+										</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="section-admin container-fluid" style="border-style:  groove; background-color: pink;" >
+        <div class="row admin text-center">
+            <div class="col-md-12">
+                <div class="row">
+                  {% cpu as  cpu_info %}
+                 
+                    <h4 class="text-left text-uppercase"><b>CPU Cores Information</b></h4>
+                </div>
+            </div>
+        </div>
+    
+    <div class="section-admin container-fluid " style="border-style:  groove;">
+      
+         
+        <div class="row admin text-center" >
+            <div class="col-md-12">
+                <div class="row">
+                  
+
+                  
+                  
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 " style="border-style:  groove;">
+                        <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                            <h5 class="text-left text-uppercase"><b>Core  1 Used (%)</b></h4>
+                            <div class="row vertical-center-box vertical-center-box-tablet">
+
+                              
+                                
+                                <div class="col-xs-9 cus-gh-hd-pro">
+                                    <h5 class="text-right no-margin"><b>{{cpu_info.Core_Usage.Core1}}/100 </b></h2>
+                                </div>
+                            </div>
+                            
+                            <div class="progress progress-mini" style="border-style:  groove;" >
+                                <div style="width:{{cpu_info.Core_Usage.Core1}}%;" class="progress-bar bg-green"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                        <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                            <h5 class="text-left text-uppercase"><b>Core  2 Used (%)</b></b></h4>
+                            <div class="row vertical-center-box vertical-center-box-tablet">
+                                
+                                <div class="col-xs-9 cus-gh-hd-pro">
+                                    <h5 class="text-right no-margin"><b>{{cpu_info.Core_Usage.Core2}}/100 </b></h2>
+                                </div>
+                               
+                            </div>
+                            <div class="progress progress-mini" style="border-style:  groove;">
+                                <div style="width:{{cpu_info.Core_Usage.Core2}}%;" class="progress-bar bg-blue"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                      <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                          <h5 class="text-left text-uppercase"><b>Core  3 Used (%)</b></h4>
+                          <div class="row vertical-center-box vertical-center-box-tablet">
+                             
+                              <div class="col-xs-9 cus-gh-hd-pro">
+                                  <h5 class="text-right no-margin"><b>{{cpu_info.Core_Usage.Core3}}/100</b></h2>
+                              </div>
+                          </div>
+                          <div class="progress progress-mini" style="border-style:  groove;">
+                              <div style="width:{{cpu_info.Core_Usage.Core3}}%;" class="progress-bar bg-purple"></div>
+                          </div>
+                      </div>
+                  </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                      <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                          <h5 class="text-left text-uppercase"><b>Core  4 Used (%)</b></h4>
+                          <div class="row vertical-center-box vertical-center-box-tablet">
+                            
+                              <div class="col-xs-9 cus-gh-hd-pro">
+                                  <h5 class="text-right no-margin"><b>{{cpu_info.Core_Usage.Core4}}/100</b></h2>
+                              </div>
+                          </div>
+                          <div class="progress progress-mini" style="border-style:  groove;">
+                            <div style="width:{{cpu_info.Core_Usage.Core4}}%;" class="progress-bar bg-purple"></div>
+                        </div>
+                      </div>
+                  </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+        <div class="section-admin container-fluid" style="border-style:  groove;background-color: pink;">
+            <div class="row admin text-center">
+                <div class="col-md-12">
+                    <div class="row">
+                        <h4 class="text-left text-uppercase"><b>RAM  Information</b></h4>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="section-admin container-fluid " style="border-style:  groove;">
+          
+             
+            <div class="row admin text-center" >
+                <div class="col-md-12" >
+                    <div class="row">
+                      {% ram as  ram_info %}
+
+                      
+                      
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 " style="border-style:  groove;">
+                            <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                                <h5 class="text-left text-uppercase" ><b>Used (GB)</b></h4>
+                                <div class="row vertical-center-box vertical-center-box-tablet">
+                                    
+                                    <div class="col-xs-9 cus-gh-hd-pro" >
+                                        <h5 class="text-right no-margin" ><b>{{ ram_info.used_ram_gb }}/{{ ram_info.total_available_ram }} </b></h2>
+                                    </div>
+                                </div>
+                                <div class="progress progress-mini" style="border-style:  groove;" >
+                                    <div style="width: {{ram_info.used_ram_per}}%;" class="progress-bar bg-green"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;"  >
+                            <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                                <h5 class="text-left text-uppercase"><b>Free (GB)</b></b></h4>
+                                <div class="row vertical-center-box vertical-center-box-tablet" >
+                                    
+                                    <div class="col-xs-9 cus-gh-hd-pro">
+                                        <h5 class="text-right no-margin"><b>{{ ram_info.free_ram_gb }}/{{ ram_info.total_available_ram }} </b></h2>
+                                    </div>
+                                </div>
+                                <div class="progress progress-mini" style="border-style:  groove;" style="border-style:  groove;">
+                                    <div style="width: {{ram_info.free_ram_per}}%;" class="progress-bar bg-blue"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                          <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                              <h5 class="text-left text-uppercase"><b>CPU Load (%)</b></h4>
+                              <div class="row vertical-center-box vertical-center-box-tablet">
+                                 
+                                  <div class="col-xs-9 cus-gh-hd-pro">
+                                      <h5 class="text-right no-margin"><b>{{ ram_info.Cpu_usage }}</b></h2>
+                                  </div>
+                              </div>
+                              <div class="progress progress-mini" style="border-style:  groove;" style="border-style:  groove;">
+                                  <div style="width: {{ ram_info.Cpu_usage }}%;" class="progress-bar bg-purple"></div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"style="border-style:  groove;">
+                          <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                              <h5 class="text-left text-uppercase"><b>Frequency (Hz)</b></h4>
+                              <div class="row vertical-center-box vertical-center-box-tablet">
+                                 
+                                  <div class="col-xs-9 cus-gh-hd-pro">
+                                      <h5 class="text-right no-margin"><b>{{ ram_info.Current_Frequency}}/{{ ram_info.Max_Frequency}} </b></h2>
+                                  </div>
+                              </div>
+                              <div class="progress progress-mini" style="border-style:  groove;" style="border-style:  outset;">
+                                  <div style="width: 100%;" class="progress-bar bg-purple"></div>
+                              </div>
+                          </div>
+                      </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <div class="section-admin container-fluid" style="border-style:  groove; background-color: pink;" >
+          <div class="row admin text-center">
+              <div class="col-md-12">
+                  <div class="row">
+                    {% gpu as  gpu_info %}
+                      <h4 class="text-left text-uppercase"><b>GPU - {{gpu_info.0.gpu_name}} <sup>@ {{gpu_info.0.gpu_tempreture}}<sup>0</sup>C</sup> </sup></b></h4>
+                  </div>
+              </div>
+          </div>
+      
+      <div class="section-admin container-fluid " style="border-style:  groove;">
+        
+           
+          <div class="row admin text-center" >
+              <div class="col-md-12">
+                  <div class="row">
+                    
+
+                    
+                    
+                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 " style="border-style:  groove;">
+                          <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                              <h5 class="text-left text-uppercase"><b>Used (GB)</b></h4>
+                              <div class="row vertical-center-box vertical-center-box-tablet">
+
+                                
+                              
+                                  <div class="col-xs-9 cus-gh-hd-pro">
+                                      <h5 class="text-right no-margin"><b>{{ gpu_info.0.gpu_used_memory }}/{{ gpu_info.0.gpu_total_memory }} </b></h2>
+                                  </div>
+                              </div>
+                              
+                              <div class="progress progress-mini" style="border-style:  groove;" >
+                                  <div style="width:{{gpu_info.0.gpu_used_memory_percent}}%;" class="progress-bar bg-green"></div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                          <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                              <h5 class="text-left text-uppercase"><b>Free (GB)</b></b></h4>
+                              <div class="row vertical-center-box vertical-center-box-tablet">
+                                  
+                                  <div class="col-xs-9 cus-gh-hd-pro">
+                                      <h5 class="text-right no-margin"><b>{{ gpu_info.0.gpu_free_memory }}/{{ gpu_info.0.gpu_total_memory }} </b></h2>
+                                  </div>
+                                 
+                              </div>
+                              <div class="progress progress-mini" style="border-style:  groove;">
+                                  <div style="width:{{gpu_info.0.gpu_free_memory_percent}}%;" class="progress-bar bg-blue"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                        <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                            <h5 class="text-left text-uppercase"><b>GPU Load (%)</b></h4>
+                            <div class="row vertical-center-box vertical-center-box-tablet">
+                               
+                                <div class="col-xs-9 cus-gh-hd-pro">
+                                    <h5 class="text-right no-margin"><b>{{ gpu_info.0.gpu_load}}/100</b></h2>
+                                </div>
+                            </div>
+                            <div class="progress progress-mini" style="border-style:  groove;">
+                                <div style="width: {{ gpu_info.0.gpu_load}}%;" class="progress-bar bg-purple"></div>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                        <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                            <h5 class="text-left text-uppercase"><b>Total GPU  RAM (GB)</b></h4>
+                            <div class="row vertical-center-box vertical-center-box-tablet">
+                               
+                                <div class="col-xs-9 cus-gh-hd-pro">
+                                    <h5 class="text-right no-margin"><b>{{ gpu_info.0.gpu_total_memory}}</b></h2>
+                                </div>
+                            </div>
+                            <div class="progress progress-mini" style="border-style:  groove;">
+                                <div style="width: 100%;" class="progress-bar bg-purple"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+
+
+      <div class="section-admin container-fluid" style="border-style:  groove;background-color: pink;">
+        <div class="row admin text-center">
+            <div class="col-md-12">
+                <div class="row">
+                    <h4 class="text-left text-uppercase"><b>Drive Information </b></h4>
+                </div>
+            </div>
+        </div>
+        
+      <div class="section-admin container-fluid" style="border-style:  groove;">
+        <div class="row admin text-center">
+            <div class="col-md-12">
+                <div class="row">
+                  {% disk as  disk_info %}
+                    <h5 class="text-left text-uppercase"><b>C Drive</b></h4>
+                </div>
+            </div>
+        </div>
+   
+      
+    <div class="section-admin container-fluid " style="border-style:  groove;">
+        
+           
+      <div class="row admin text-center">
+          <div class="col-md-12">
+              <div class="row">
+                
+
+              
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 "  style="border-style:  groove;">
+                      <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                          <h5 class="text-left text-uppercase"><b>Used (GB)</b></h4>
+                          <div class="row vertical-center-box vertical-center-box-tablet">
+
+                            
+                          
+                              <div class="col-xs-9 cus-gh-hd-pro">
+                                  <h5 class="text-right no-margin"><b>{{ disk_info.C.Used_Space }}/{{ disk_info.C.Total_Space }} </b></h2>
+                              </div>
+                          </div>
+                          
+                          <div class="progress progress-mini" style="border-style:  groove;">
+                              <div style="width:{{disk_info.C.Used_Space_percent}}%;" class="progress-bar bg-green"></div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                      <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                          <h5 class="text-left text-uppercase"><b>Free (GB)</b></b></h4>
+                          <div class="row vertical-center-box vertical-center-box-tablet">
+                              
+                              <div class="col-xs-9 cus-gh-hd-pro">
+                                  <h5 class="text-right no-margin"><b>{{ disk_info.C.Free_Space }}/{{ disk_info.C.Total_Space }}</b></h2>
+                              </div>
+                             
+                          </div>
+                          <div class="progress progress-mini" style="border-style:  groove;">
+                              <div style="width:{{disk_info.C.Free_Space_percent}}%;" class="progress-bar bg-blue"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                    <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                        <h5 class="text-left text-uppercase"><b>Used  (%)</b></h4>
+                        <div class="row vertical-center-box vertical-center-box-tablet">
+                           
+                            <div class="col-xs-9 cus-gh-hd-pro">
+                                <h5 class="text-right no-margin"><b>{{ disk_info.C.Percent_Use }} %</b></h2>
+                            </div>
+                        </div>
+                        <div class="progress progress-mini" style="border-style:  groove;">
+                            <div style="width: {{disk_info.C.Used_Space_percent}}%;" class="progress-bar bg-purple"></div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                    <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                        <h5 class="text-left text-uppercase"><b>Total Space (GB)</b></h4>
+                        <div class="row vertical-center-box vertical-center-box-tablet">
+                           
+                            <div class="col-xs-9 cus-gh-hd-pro">
+                                <h5 class="text-right no-margin"><b>{{ disk_info.C.Total_Space }}</b></h2>
+                            </div>
+                        </div>
+                        <div class="progress progress-mini" style="border-style:  groove;">
+                            <div style="width: 100%;" class="progress-bar bg-purple"></div>
+                        </div>
+                    </div>
+                </div>
+                
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <div class="section-admin container-fluid" style="border-style:  groove;">
+    <div class="row admin text-center">
+        <div class="col-md-12">
+            <div class="row">
+              
+                <h5 class="text-left text-uppercase"><b>E Drive</b></h4>
+            </div>
+        </div>
+    </div>
+
+   
+<div class="section-admin container-fluid " style="border-style:  groove;">
+    
+       
+  <div class="row admin text-center" >
+      <div class="col-md-12">
+          <div class="row">
+            
+
+          
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 "  style="border-style:  groove;">
+                  <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                      <h5 class="text-left text-uppercase"><b>Used (GB)</b></h4>
+                      <div class="row vertical-center-box vertical-center-box-tablet">
+
+                        
+                      
+                          <div class="col-xs-9 cus-gh-hd-pro">
+                              <h5 class="text-right no-margin"><b>{{ disk_info.E.Used_Space }}/{{ disk_info.E.Total_Space }} </b></h2>
+                          </div>
+                      </div>
+                      
+                      <div class="progress progress-mini" style="border-style:  groove;">
+                          <div style="width:{{disk_info.E.Used_Space_percent}}%;" class="progress-bar bg-green"></div>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                  <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                      <h5 class="text-left text-uppercase"><b>Free (GB)</b></b></h4>
+                      <div class="row vertical-center-box vertical-center-box-tablet">
+                          
+                          <div class="col-xs-9 cus-gh-hd-pro">
+                              <h5 class="text-right no-margin"><b>{{ disk_info.E.Free_Space }}/{{ disk_info.E.Total_Space }}</b></h2>
+                          </div>
+                         
+                      </div>
+                      <div class="progress progress-mini" style="border-style:  groove;">
+                          <div style="width:{{disk_info.E.Free_Space_percent}}%;" class="progress-bar bg-blue"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                    <h5 class="text-left text-uppercase"><b>Used  (%)</b></h4>
+                    <div class="row vertical-center-box vertical-center-box-tablet">
+                       
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                            <h5 class="text-right no-margin"><b>{{ disk_info.E.Percent_Use }} %</b></h2>
+                        </div>
+                    </div>
+                    <div class="progress progress-mini" style="border-style:  groove;">
+                        <div style="width: {{disk_info.E.Used_Space_percent}}%;" class="progress-bar bg-purple"></div>
+                    </div>
+                </div>
+            </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                    <h5 class="text-left text-uppercase"><b>Total Space (GB)</b></h4>
+                    <div class="row vertical-center-box vertical-center-box-tablet">
+                       
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                            <h5 class="text-right no-margin"><b>{{ disk_info.E.Total_Space }}</b></h2>
+                        </div>
+                    </div>
+                    <div class="progress progress-mini" style="border-style:  groove;">
+                        <div style="width: 100%;" class="progress-bar bg-purple"></div>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+<div class="section-admin container-fluid" style="border-style:  groove;">
+    <div class="row admin text-center">
+        <div class="col-md-12">
+            <div class="row">
+              
+                <h5 class="text-left text-uppercase"><b>F Drive</b></h4>
+            </div>
+        </div>
+    </div>
+
+
+<div class="section-admin container-fluid "style="border-style:  groove;">
+  
+     
+<div class="row admin text-center">
+    <div class="col-md-12">
+        <div class="row">
+          
+
+        
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 "  style="border-style:  groove;">
+                <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                    <h5 class="text-left text-uppercase"><b>Used (GB)</b></h4>
+                    <div class="row vertical-center-box vertical-center-box-tablet">
+
+                      
+                    
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                            <h5 class="text-right no-margin"><b>{{ disk_info.F.Used_Space }}/{{ disk_info.F.Total_Space }} </b></h2>
+                        </div>
+                    </div>
+                    
+                    <div class="progress progress-mini" style="border-style:  groove;">
+                        <div style="width:{{disk_info.F.Used_Space_percent}}%;" class="progress-bar bg-green"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                    <h5 class="text-left text-uppercase"><b>Free (GB)</b></b></h4>
+                    <div class="row vertical-center-box vertical-center-box-tablet">
+                        
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                            <h5 class="text-right no-margin"><b>{{ disk_info.F.Free_Space }}/{{ disk_info.F.Total_Space }}</b></h2>
+                        </div>
+                       
+                    </div>
+                    <div class="progress progress-mini" style="border-style:  groove;">
+                        <div style="width:{{disk_info.F.Free_Space_percent}}%;" class="progress-bar bg-blue"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+              <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                  <h5 class="text-left text-uppercase"><b>Used  (%)</b></h4>
+                  <div class="row vertical-center-box vertical-center-box-tablet">
+                     
+                      <div class="col-xs-9 cus-gh-hd-pro">
+                          <h5 class="text-right no-margin"><b>{{ disk_info.F.Percent_Use }} %</b></h2>
+                      </div>
+                  </div>
+                  <div class="progress progress-mini" style="border-style:  groove;">
+                      <div style="width: {{disk_info.F.Used_Space_percent}}%;" class="progress-bar bg-purple"></div>
+                  </div>
+              </div>
+          </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+              <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                  <h5 class="text-left text-uppercase"><b>Total Space (GB)</b></h4>
+                  <div class="row vertical-center-box vertical-center-box-tablet">
+                     
+                      <div class="col-xs-9 cus-gh-hd-pro">
+                          <h5 class="text-right no-margin"><b>{{ disk_info.F.Total_Space }}</b></h2>
+                      </div>
+                  </div>
+                  <div class="progress progress-mini" style="border-style:  groove;">
+                      <div style="width: 100%;" class="progress-bar bg-purple"></div>
+                  </div>
+              </div>
+          </div>
+          
+        </div>
+    </div>
+</div> 
+</div> 
+</div>  
+<div class="section-admin container-fluid" style="border-style:  groove;">
+    <div class="row admin text-center">
+        <div class="col-md-12">
+            <div class="row">
+              
+                <h5 class="text-left text-uppercase"><b>G Drive</b></h4>
+            </div>
+        </div>
+    </div>
+
+
+<div class="section-admin container-fluid " style="border-style:  groove;">
+  
+     
+<div class="row admin text-center">
+    <div class="col-md-12">
+        <div class="row">
+          
+
+        
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 " style="border-style:  groove;">
+                <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                    <h5 class="text-left text-uppercase"><b>Used (GB)</b></h4>
+                    <div class="row vertical-center-box vertical-center-box-tablet">
+
+                      
+                    
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                            <h5 class="text-right no-margin"><b>{{ disk_info.G.Used_Space }}/{{ disk_info.G.Total_Space }} </b></h2>
+                        </div>
+                    </div>
+                    
+                    <div class="progress progress-mini" style="border-style:  groove;">
+                        <div style="width:{{disk_info.G.Used_Space_percent}}%;" class="progress-bar bg-green"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                    <h5 class="text-left text-uppercase"><b>Free (GB)</b></b></h4>
+                    <div class="row vertical-center-box vertical-center-box-tablet">
+                        
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                            <h5 class="text-right no-margin"><b>{{ disk_info.G.Free_Space }}/{{ disk_info.G.Total_Space }}</b></h2>
+                        </div>
+                       
+                    </div>
+                    <div class="progress progress-mini" style="border-style:  groove;">
+                        <div style="width:{{disk_info.G.Free_Space_percent}}%;" class="progress-bar bg-blue"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+              <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                  <h5 class="text-left text-uppercase"><b>Used  (%)</b></h4>
+                  <div class="row vertical-center-box vertical-center-box-tablet">
+                     
+                      <div class="col-xs-9 cus-gh-hd-pro">
+                          <h5 class="text-right no-margin"><b>{{ disk_info.G.Percent_Use }} %</b></h2>
+                      </div>
+                  </div>
+                  <div class="progress progress-mini" style="border-style:  groove;">
+                      <div style="width: {{disk_info.G.Used_Space_percent}}%;" class="progress-bar bg-purple"></div>
+                  </div>
+              </div>
+          </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+              <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                  <h5 class="text-left text-uppercase"><b>Total Space (GB)</b></h4>
+                  <div class="row vertical-center-box vertical-center-box-tablet">
+                     
+                      <div class="col-xs-9 cus-gh-hd-pro">
+                          <h5 class="text-right no-margin"><b>{{ disk_info.G.Total_Space }}</b></h2>
+                      </div>
+                  </div>
+                  <div class="progress progress-mini" style="border-style:  groove;">
+                      <div style="width: 100%;" class="progress-bar bg-purple"></div>
+                  </div>
+              </div>
+          </div>
+          
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+<div class="section-admin container-fluid" style="border-style:  groove;">
+    <div class="row admin text-center">
+        <div class="col-md-12">
+            <div class="row">
+              
+                <h5 class="text-left text-uppercase"><b>H Drive</b></h4>
+            </div>
+        </div>
+    </div>
+
+  
+  
+
+  <div class="row admin text-center"  style="border-style:  groove;">
+    <div class="col-md-12">
+        <div class="row">
+          
+
+        
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 " style="border-style:  groove;">
+                <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                    <h5 class="text-left text-uppercase"><b>Used (GB)</b></h4>
+                    <div class="row vertical-center-box vertical-center-box-tablet">
+
+                      
+                    
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                            <h5 class="text-right no-margin"><b>{{ disk_info.H.Used_Space }}/{{ disk_info.H.Total_Space }} </b></h2>
+                        </div>
+                    </div>
+                    
+                    <div class="progress progress-mini" style="border-style:  groove;">
+                        <div style="width:{{disk_info.H.Used_Space_percent}}%;" class="progress-bar bg-green"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+                <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                    <h5 class="text-left text-uppercase"><b>Free (GB)</b></b></h4>
+                    <div class="row vertical-center-box vertical-center-box-tablet">
+                        
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                            <h5 class="text-right no-margin"><b>{{ disk_info.H.Free_Space }}/{{ disk_info.H.Total_Space }}</b></h2>
+                        </div>
+                       
+                    </div>
+                    <div class="progress progress-mini" style="border-style:  groove;">
+                        <div style="width:{{disk_info.H.Free_Space_percent}}%;" class="progress-bar bg-blue"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+              <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                  <h5 class="text-left text-uppercase"><b>Used  (%)</b></h4>
+                  <div class="row vertical-center-box vertical-center-box-tablet">
+                     
+                      <div class="col-xs-9 cus-gh-hd-pro">
+                          <h5 class="text-right no-margin"><b>{{ disk_info.H.Percent_Use }} %</b></h2>
+                      </div>
+                  </div>
+                  <div class="progress progress-mini" style="border-style:  groove;">
+                      <div style="width: {{disk_info.H.Used_Space_percent}}%;" class="progress-bar bg-purple"></div>
+                  </div>
+              </div>
+          </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="border-style:  groove;">
+              <div class="admin-content analysis-progrebar-ctn res-mg-t-5">
+                  <h5 class="text-left text-uppercase"><b>Total Space (GB)</b></h4>
+                  <div class="row vertical-center-box vertical-center-box-tablet">
+                     
+                      <div class="col-xs-9 cus-gh-hd-pro">
+                          <h5 class="text-right no-margin"><b>{{ disk_info.H.Total_Space }}</b></h2>
+                      </div>
+                  </div>
+                  <div class="progress progress-mini" style="border-style:  groove;">
+                      <div style="width: 100%;" class="progress-bar bg-purple"></div>
+                  </div>
+              </div>
+          </div>
+          
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+     
+</div>
+    
+        
+        <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright © 2023 <a href="https://www.rstiwari.com">RS Tiwari</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery
+		============================================ -->
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="{% static  'js/wow.min.js' %}"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="{% static  'js/jquery-price-slider.js' %}"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="{% static  'js/jquery.scrollUp.min.js' %}"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="{% static 'js/scrollbar/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script src="{% static  'js/scrollbar/mCustomScrollbar-active.js' %}"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="{% static 'js/metisMenu/metisMenu.min.js' %}"></script>
+    <script src="{% static 'js/metisMenu/metisMenu-active.js' %}"></script>
+    <!-- morrisjs JS
+		============================================ -->
+    <script src="{% static  'js/sparkline/jquery.sparkline.min.js' %}"></script>
+    <script src="{% static  'js/sparkline/jquery.charts-sparkline.js' %}"></script>
+    <!-- calendar JS
+		============================================ -->
+    <script src="{% static  'js/calendar/moment.min.js' %}"></script>
+    <script src="{% static  'js/calendar/fullcalendar.min.js' %}"></script>
+    <script src="{% static  'js/calendar/fullcalendar-active.js' %}"></script>
+	<!-- float JS
+		============================================ -->
+    <script src="{% static  'js/flot/jquery.flot.js' %}"></script>
+    <script src="{% static  'js/flot/jquery.flot.resize.js' %}"></script>
+    <script src="{% static  'js/flot/jquery.flot.pie.js' %}"></script>
+    <script src="{% static  'js/flot/jquery.flot.tooltip.min.js' %}"></script>
+    <script src="{% static  'js/flot/jquery.flot.orderBars.js' %}"></script>
+    <script src="{% static  'js/flot/curvedLines.js' %}"></script>
+    <script src="{% static  'js/flot/flot-active.js' %}"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="{% static  'js/plugins.js' %}"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="{% static  'js/main.js' %}"></script>
+    <script>
+      setTimeout(() => {document.location.reload();}, 3000);
+    </script>
+</body>
+
+</html>
