@@ -1,11 +1,13 @@
 <h1> CPU Dashboard </h1>
 
 <h2>It displays  the follows information</h2>
-1. RAM Usage
-2. GPU USage
-3. Free Space  in Hard Disk
-4. Clock Speed of  Ram
-5. CPU  Load and other CPU Information
+<ol>
+<li>RAM Usage</li>
+<li>GPU USage</li>
+<li>Free Space  in Hard Disk</li>
+<li>Clock Speed of  Ram</li>
+<li>CPU  Load and other CPU Information</li>
+</ol>
 
 
 <div id="header" align="center">
